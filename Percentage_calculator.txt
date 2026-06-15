@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Board percentage calculator.");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Max marks per subject");
+        float max = sc.nextInt();
+        System.out.println("Marks obtained in physics");
+        float phy = sc.nextInt();
+        System.out.println("Marks obtained in chemistry");
+        float chem = sc.nextInt();
+        System.out.println("Marks obtained in maths");
+        float maths = sc.nextInt();
+        float totalobt = phy + chem + maths;
+        float maxtotal = max*3;
+        float percentage = (totalobt/maxtotal)*100;
+        System.out.println("Your percentage is " + percentage);
+        if (percentage > 33.3)
+        {
+         System.out.println("your result: PASS");   
+        }
+        else
+        {
+            System.out.println("your result: FAIL");
+        }
+        
+    }
+}
